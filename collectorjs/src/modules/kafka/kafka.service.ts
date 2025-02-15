@@ -1,4 +1,3 @@
-// news-collector/src/modules/kafka/kafka.service.ts
 import { Injectable, OnModuleInit, Logger } from '@nestjs/common';
 import { Kafka } from 'kafkajs';
 import { kafkaConfig } from '../../config/kafka.config';

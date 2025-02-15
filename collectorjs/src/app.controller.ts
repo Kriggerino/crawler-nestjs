@@ -1,4 +1,3 @@
-// app.controller.ts
 import { Controller } from '@nestjs/common';
 
 @Controller()

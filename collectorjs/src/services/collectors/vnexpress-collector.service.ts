@@ -1,4 +1,3 @@
-// news-collector/src/services/collectors/vnexpress-collector.service.ts
 import { Injectable, Logger } from '@nestjs/common';
 import { KafkaService } from '../../modules/kafka/kafka.service';
 import { TOPICS } from '../../config/kafka.config';

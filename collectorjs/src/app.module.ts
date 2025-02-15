@@ -1,4 +1,3 @@
-// news-collector/src/app.module.ts
 import { Module } from '@nestjs/common';
 import { ScheduleModule } from '@nestjs/schedule';
 import { KafkaModule } from './modules/kafka/kafka.module';
