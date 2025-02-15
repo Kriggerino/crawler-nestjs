@@ -25,3 +25,6 @@ export class Article {
 
 export type ArticleDocument = Article & Document;
 export const ArticleSchema = SchemaFactory.createForClass(Article);
+ArticleSchema.index({ url: 1 }, { unique: true }); //fast url search (prevening repeats)
+ArticleSchema.index({ topic: 1, createdAt: -1 }); // fast latest search
+ArticleSchema.index({ topic: 1, source: 1, createdAt: -1 }); //filter by both topic and source
