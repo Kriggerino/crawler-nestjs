@@ -12,6 +12,7 @@ export class VnExpressCollectorService {
   private readonly topics = [
     { name: 'kinh-doanh', path: '/kinh-doanh' },
     { name: 'the-gioi', path: '/the-gioi' },
+    //Add more
   ];
 
   constructor(private readonly kafkaService: KafkaService) {}

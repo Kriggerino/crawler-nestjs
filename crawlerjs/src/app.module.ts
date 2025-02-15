@@ -4,7 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Article, ArticleSchema } from './schemas/article.schema';
 import { DantriCrawlerService } from './services/crawlers/dantri-crawler.service';
 import { VnExpressCrawlerService } from './services/crawlers/vnexpress-crawler.service';
-import { ArticleConsumerService } from './services/article-consumer.service';
+import { KafkaConsumerService } from './services/kafka/kafka-consumer.service';
 import { AppController } from './app.controller';
 import { mongoConfig } from './config/mongodb.config';
 
@@ -17,7 +17,7 @@ import { mongoConfig } from './config/mongodb.config';
   providers: [
     DantriCrawlerService,
     VnExpressCrawlerService,
-    ArticleConsumerService,
+    KafkaConsumerService,
   ],
 })
 export class AppModule {}

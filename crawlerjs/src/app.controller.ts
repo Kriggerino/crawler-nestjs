@@ -1,4 +1,3 @@
-// src/app.controller.ts
 import { Controller, Get, Query } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
@@ -7,13 +6,13 @@ import { Article, ArticleDocument } from './schemas/article.schema';
 @Controller()
 export class AppController {
   constructor(
-    @InjectModel(Article.name) private articleModel: Model<ArticleDocument>
+    @InjectModel(Article.name) private articleModel: Model<ArticleDocument>,
   ) {}
 
   @Get('articles')
   async getLatestArticles(
     @Query('topic') topic: string,
-    @Query('source') source?: string
+    @Query('source') source?: string,
   ) {
     const query: any = { topic };
     if (source) {
@@ -30,8 +29,6 @@ export class AppController {
 
   @Get('articles/detail')
   async getArticleDetail(@Query('url') url: string) {
-    return this.articleModel
-      .findOne({ url })
-      .exec();
+    return this.articleModel.findOne({ url }).exec();
   }
 }

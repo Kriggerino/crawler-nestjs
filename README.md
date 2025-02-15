@@ -10,6 +10,12 @@ Docker and Docker Compose
 Node.js (v14 or later)
 npm (v6 or later)
 
+**Database Index**
+
+ArticleSchema.index({ url: 1 }, { unique: true }); // Optimize for single url search and preventing duplicates
+ArticleSchema.index({ topic: 1, createdAt: -1 }); // Optimized createdAt column (topic optional) for latest 10
+ArticleSchema.index({ topic: 1, source: 1, createdAt: -1 }); // Optimized for filtered topic AND source
+
 **Setup**
 
 1. Clone the repo

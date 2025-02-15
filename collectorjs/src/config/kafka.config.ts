@@ -1,7 +1,6 @@
-// news-collector/src/config/kafka.config.ts
 export const kafkaConfig = {
   clientId: 'news-collector',
-  brokers: ['localhost:9092'],
+  brokers: ['localhost:29092'],
   groupId: 'collector-group',
 };
 
